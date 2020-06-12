@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body onload='main()'>
+    <div class="row">
+      <canvas id='dawin-webgl' class="col s8">
+        Utilisez un navigateur compatible avec WebGL
+      </canvas>
+      <div class="settings col s4">
+        <h3 class="row center-align">- - Settings - -</h3>
+        <h5>Rotation</h5>
+
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">X</span>
+          <p class="range-field col s10">
+            <input type="range" id="rotateX" min="-3.14" max="3.14" step="0.01"/>
+          </p>
+        </div>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">Y</span>
+          <p class="range-field col s10">
+            <input type="range" id="rotateY" min="-3.14" max="3.14" step="0.01"/>
+          </p>
+        </div>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">Z</span>
+          <p class="range-field col s10">
+            <input type="range" id="rotateZ" min="-3.14" max="3.14" step="0.01"/>
+          </p>
+        </div>
+
+        <h5>Translation</h5>
+
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">X</span>
+          <p class="range-field col s10">
+            <input type="range" id="translateX" min="-10" max="10" step="0.1"/>
+          </p>
+        </div>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">Y</span>
+          <p class="range-field col s10">
+            <input type="range" id="translateY" min="-10" max="10" step="0.1"/>
+          </p>
+        </div>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">Z</span>
+          <p class="range-field col s10">
+            <input type="range" id="translateZ" min="-10" max="10" step="0.1"/>
+          </p>
+        </div>
+        <h5>Caméra</h5>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">Zoom</span>
+          <p class="range-field col s10">
+            <input type="range" id="zoom" min="0.1" max="5" value="1" step="0.1"/>
+          </p>
+        </div>
+        <div class="row valign-wrapper">
+          <span class="col s2 center-align">FOV</span>
+          <p class="range-field col s10">
+            <input type="range" id="fov" min="30" max="120" step="1"/>
+          </p>
+        </div>
+        <div class="row">
+          <div class="color-container col s8">
+            <div id="color-picker-container"></div>
+          </div>
+          <div class="choices-container col s4">
+            <p>color : <span class="colorValue"></span></p>
+            <div>
+              <div></div>
+              <div>
+                <div class="row">
+                  <div data-id="1" class="part cube-top col s4 offset-s4 center-align valign-wrapper"><div class="truncate">TOP</div></div>
+                </div>
+                <div class="row">
+                  <div data-id="2" class="part cube-left col s4 center-align valign-wrapper"><div class="truncate">LEFT</div></div>
+                  <div data-id="3" class="part cube-front col s4 center-align valign-wrapper"><div class="truncate">FRONT</div></div>
+                  <div data-id="4" class="part cube-right col s4 center-align valign-wrapper"><div class="truncate">RIGHT</div></div>
+                </div>
+                <div class="row">
+                  <div data-id="5" class="part cube-bottom col s4 offset-s4 center-align valign-wrapper"><div class="truncate">DOWN</div></div>
+                </div>
+                <div class="row">
+                  <div data-id="6" class="part cube-back col s4 offset-s4 center-align valign-wrapper"><div class="truncate">BACK</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="waves-effect waves-light btn red lighten-1" id="reset">Reset</a>
+      </div>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='gl-matrix-min.js'></script>
+    <script src='dist/iro.min.js'></script>
+    <script src='tp3.js'></script>
+          
+  </body>
+</html>	
